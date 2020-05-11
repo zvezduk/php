@@ -3,3 +3,4 @@ app/vendor
 .idea
 app/.phpunit.result.cache
 http/rest-client.env.json
+http/sch.xlsx
