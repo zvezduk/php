@@ -12,5 +12,9 @@ return [
             'path'  => 'php://stdout',
             'level' => \Monolog\Logger::DEBUG,
         ],
+
+        'redis' => [
+            'host' => getenv('REDIS_HOST')
+        ],
     ],
 ];

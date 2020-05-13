@@ -23,12 +23,22 @@ services:
       - SYS_PTRACE
     restart: always
 
+  worker:
+    << : *default-service
+    cap_add:
+      - SYS_PTRACE
+    restart: always
+    command: ["php", "-f", "public/worker.php"]
+
   nginx:
     build: ./nginx
     depends_on:
       - api
     ports:
       - 80:80
+
+  redis:
+    image: redis
 
 volumes:
   profile:

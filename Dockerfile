@@ -9,7 +9,7 @@ RUN apt-get update \
     && apt-get install -y apt-utils wget \
         libzip-dev libjpeg62-turbo-dev libpng-dev libwebp-dev \
     && docker-php-ext-install zip pdo_mysql pcntl sockets \
-    && pecl install redis-5.1.1 xdebug-2.8.1 \
+    && pecl install redis xdebug \
     && docker-php-ext-enable redis \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*

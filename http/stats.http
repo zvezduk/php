@@ -1,0 +1,13 @@
+PUT {{ api_url }}/stats/en
+accept: application/json
+Authorization: Bearer {{ accessToken }}
+Content-Type: application/json
+
+###
+
+GET {{ api_url }}/stats
+accept: application/json
+Authorization: Bearer {{ accessToken }}
+Content-Type: application/json
+
+###
